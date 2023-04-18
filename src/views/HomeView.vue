@@ -1,5 +1,9 @@
-<script setup></script>
+<script setup>
+import EcentCard from '@/components/EventCard.vue'
+</script>
 
 <template>
-  <div class="home"></div>
+  <div class="home">
+    <EcentCard />
+  </div>
 </template>
