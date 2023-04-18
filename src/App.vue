@@ -8,6 +8,7 @@ import { RouterLink, RouterView } from 'vue-router'
       <div class="wrapper">
         <nav>
           <RouterLink to="/">Home</RouterLink>
+          <div class="div"></div>
           <RouterLink to="/about">About</RouterLink>
         </nav>
       </div>
@@ -17,7 +18,7 @@ import { RouterLink, RouterView } from 'vue-router'
   </div>
 </template>
 
-<style scoped>
+<style>
 #layout {
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
@@ -25,8 +26,18 @@ import { RouterLink, RouterView } from 'vue-router'
 }
 
 nav {
+  display: flex;
   padding: 30px;
+  justify-content: center;
 }
+
+.div {
+  width: 2px;
+  height: 10px;
+  margin: 5px;
+  background: #000;
+}
+
 nav a {
   font-weight: bold;
   color: #2c3e50;
@@ -34,5 +45,9 @@ nav a {
 
 nav a.router-link-exact-active {
   color: #42b983;
+}
+
+h2 {
+  font-size: 20px;
 }
 </style>
