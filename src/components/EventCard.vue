@@ -9,6 +9,8 @@ defineProps({
 
 <template>
   <div class="event-card">
+    <img :src="event.img" alt="automobiles" class="cars" />
+
     <!-- Display event data -->
     <h2>{{ event.title }}</h2>
     <span>@{{ event.time }} on {{ event.date }}</span>
@@ -16,12 +18,21 @@ defineProps({
 </template>
 
 <style scoped>
+.cars {
+  width: 220px;
+}
+
 .event-card {
-  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin: 10px;
   width: 250px;
+  height: 240px;
   cursor: pointer;
   border: 1px solid #39495c;
   margin-bottom: 18px;
+  background-size: auto;
+  background-position: center;
 }
 
 .event-card:hover {

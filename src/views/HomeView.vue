@@ -6,13 +6,14 @@ const events = ref([
   {
     id: 436546,
     category: 'Automobile',
-    title: 'Bmw M5 Compition',
+    title: 'Bmw M5 Competition',
     descr: 'One of the best car in the world.',
     location: 'Dushanbe City',
     date: 'March 23, 2023',
     time: '13:00',
     petsAllowed: 'true',
-    organizer: 'Mikel Angelos'
+    organizer: 'Mikel Angelos',
+    img: 'https://s3.us-east-2.amazonaws.com/dealer-inspire-vps-vehicle-images/4f95-210007648/WBS83CH08MCF63135/4e82fa6e243019a6970a5ae05af596b3.jpg'
   },
   {
     id: 217899,
@@ -23,7 +24,8 @@ const events = ref([
     date: 'August 11, 2023',
     time: '09:00',
     petsAllowed: 'true',
-    organizer: 'Kesedy'
+    organizer: 'Kesedy',
+    img: 'https://www.mansory.com/sites/default/files/2022-12/MANSORY%20ROLLS-ROYCE%20CULLINAN%20Purple01.JPG'
   },
   {
     id: 567464,
@@ -34,7 +36,8 @@ const events = ref([
     date: 'August 02, 2012',
     time: '06:00',
     petsAllowed: 'true',
-    organizer: 'Jack NewMan'
+    organizer: 'Jack NewMan',
+    img: 'https://hips.hearstapps.com/hmg-prod/images/2022-gmc-sierra-1500-at4x-107-1652106261.jpg'
   }
 ])
 </script>
@@ -50,7 +53,7 @@ const events = ref([
 <style scoped>
 .events {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 </style>
