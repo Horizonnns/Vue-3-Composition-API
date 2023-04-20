@@ -1,13 +1,12 @@
 <script setup>
 import { ref, onMounted } from 'vue'
-import axios from 'axios'
+import EventService from '@/services/EventService.js'
 import EcentCard from '@/components/EventCard.vue'
 
 const events = ref(null)
 
 onMounted(() => {
-  axios
-    .get('https://my-json-server.typicode.com/mekess/Vue-3-Composition-API-/events')
+  EventService.getEvents()
     .then((response) => {
       events.value = response.data
     })
