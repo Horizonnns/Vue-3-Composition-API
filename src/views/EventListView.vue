@@ -1,45 +1,20 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
+import axios from 'axios'
 import EcentCard from '@/components/EventCard.vue'
 
-const events = ref([
-  {
-    id: 436546,
-    category: 'Automobile',
-    title: 'Bmw M5 Competition',
-    descr: 'One of the best car in the world.',
-    location: 'Dushanbe City',
-    date: 'March 23, 2023',
-    time: '13:00',
-    petsAllowed: 'true',
-    organizer: 'Mikel Angelos',
-    img: 'https://s3.us-east-2.amazonaws.com/dealer-inspire-vps-vehicle-images/4f95-210007648/WBS83CH08MCF63135/4e82fa6e243019a6970a5ae05af596b3.jpg'
-  },
-  {
-    id: 217899,
-    category: 'Automobile',
-    title: 'Rolls Royce',
-    descr: 'A luxury car for a luxury lover.',
-    location: 'Moscow City',
-    date: 'August 11, 2023',
-    time: '09:00',
-    petsAllowed: 'true',
-    organizer: 'Kesedy',
-    img: 'https://www.mansory.com/sites/default/files/2022-12/MANSORY%20ROLLS-ROYCE%20CULLINAN%20Purple01.JPG'
-  },
-  {
-    id: 567464,
-    category: 'Automobile',
-    title: 'GMC Considering',
-    descr: 'For the most insane.',
-    location: 'Texas City',
-    date: 'August 02, 2012',
-    time: '06:00',
-    petsAllowed: 'true',
-    organizer: 'Jack NewMan',
-    img: 'https://hips.hearstapps.com/hmg-prod/images/2022-gmc-sierra-1500-at4x-107-1652106261.jpg'
-  }
-])
+const events = ref(null)
+
+onMounted(() => {
+  axios
+    .get('https://my-json-server.typicode.com/mekess/Vue-3-Composition-API-/events')
+    .then((response) => {
+      events.value = response.data
+    })
+    .catch((error) => {
+      console.log(error)
+    })
+})
 </script>
 
 <template>
