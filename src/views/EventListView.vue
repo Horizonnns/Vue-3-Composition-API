@@ -17,7 +17,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <h1>There is a card of 3 car models</h1>
+  <h1 class="title">There is a card of 3 car models</h1>
 
   <div class="events">
     <EcentCard v-for="event in events" :key="event.id" :event="event" />
@@ -29,6 +29,16 @@ onMounted(() => {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.title {
+  font-size: 32px;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 20px;
+  }
 }
 
 @media (max-width: 768px) {

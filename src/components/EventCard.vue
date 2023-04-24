@@ -14,7 +14,7 @@ defineProps({
         <img :src="event.img" alt="automobiles" class="cars" />
 
         <!-- Display event data -->
-        <h2>{{ event.title }}</h2>
+        <h2 class="title">{{ event.title }}</h2>
         <span>@{{ event.time }} on {{ event.date }}</span>
       </div>
     </RouterLink>
