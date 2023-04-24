@@ -30,4 +30,11 @@ onMounted(() => {
   justify-content: center;
   align-items: center;
 }
+
+@media (max-width: 768px) {
+  .events {
+    display: flex;
+    flex-direction: column;
+  }
+}
 </style>

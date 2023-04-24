@@ -8,15 +8,17 @@ defineProps({
 </script>
 
 <template>
-  <RouterLink class="event-link" :to="{ name: 'event-details', params: { id: event.id } }">
-    <div class="event-card">
-      <img :src="event.img" alt="automobiles" class="cars" />
+  <section class="cards">
+    <RouterLink class="event-link" :to="{ name: 'event-details', params: { id: event.id } }">
+      <div class="event-card">
+        <img :src="event.img" alt="automobiles" class="cars" />
 
-      <!-- Display event data -->
-      <h2>{{ event.title }}</h2>
-      <span>@{{ event.time }} on {{ event.date }}</span>
-    </div>
-  </RouterLink>
+        <!-- Display event data -->
+        <h2>{{ event.title }}</h2>
+        <span>@{{ event.time }} on {{ event.date }}</span>
+      </div>
+    </RouterLink>
+  </section>
 </template>
 
 <style scoped>
